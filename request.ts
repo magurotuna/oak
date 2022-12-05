@@ -82,7 +82,7 @@ export class Request {
    * the request. */
   get url(): URL {
     console.log("=====================================================");
-    console.log("url getter");
+    console.log("url getter", this.#url);
     console.log("=====================================================");
     if (!this.#url) {
       const serverRequest = this.#serverRequest;
