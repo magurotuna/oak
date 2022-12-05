@@ -93,6 +93,7 @@ export class Request {
         // if the URL isn't valid.
         try {
           this.#url = new URL(serverRequest.rawUrl);
+          console.log("Native request", this.#url);
           return this.#url;
         } catch {
           // we don't care about errors here
