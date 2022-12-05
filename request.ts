@@ -81,6 +81,9 @@ export class Request {
    * the `X-Forwarded-Proto` and `X-Forwarded-Host` header values if present in
    * the request. */
   get url(): URL {
+    console.log("=====================================================");
+    console.log("url getter");
+    console.log("=====================================================");
     if (!this.#url) {
       const serverRequest = this.#serverRequest;
       if (serverRequest instanceof NativeRequest && !this.#proxy) {
