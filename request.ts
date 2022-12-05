@@ -107,6 +107,9 @@ export class Request {
         proto = this.#secure ? "https" : "http";
         host = serverRequest.headers.get("host") ?? "";
       }
+      console.log("=========================================================");
+      console.log({ proto, host, reqUrl: serverRequest.url });
+      console.log("=========================================================");
       try {
         this.#url = new URL(`${proto}://${host}${serverRequest.url}`);
       } catch {
